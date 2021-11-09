@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+## Install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+## Install ansible
+brew install ansible
+
+## pull ansible
+ansible-pull -U https://github.com/cxgarcia/ansible.git
