@@ -1,0 +1,8 @@
+- name: Install packages
+  become: false
+  tags:
+    - zsh
+  homebrew:
+    name: ['starship']
+- name: Ignore DS_Store
+  shell: touch $HOME/.gitignore_global && echo '.DS_Store' >> $HOME/.gitignore_global

@@ -4,6 +4,7 @@
     - core
     - mac
   homebrew:
+    state: present
     name:
       [
         'wget',
@@ -15,7 +16,10 @@
         'git-lfs',
         'github/gh/gh',
         'zsh',
+        'fnm',
+        'stow',
       ]
+
 - name: Install casks
   become: false
   tags:
@@ -24,6 +28,7 @@
   homebrew:
     install_options: cask
     state: present
+    upgrade_all: yes
     name:
       [
         'dropbox',

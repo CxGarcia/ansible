@@ -1,0 +1,11 @@
+- name: fnm completions
+  shell: eval "$(fnm env)"
+  tags:
+    - install
+    - node
+
+- name: Install npm packages
+  shell: npm i -g yarn nodemon typescript prettier
+  tags:
+    - install
+    - node

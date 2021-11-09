@@ -1,0 +1,51 @@
+- name: Git setup name
+  community.general.git_config:
+    name: user.name
+    scope: global
+    value: 'cxgarcia'
+  tags:
+    - git
+
+- name: Git setup email
+  community.general.git_config:
+    name: user.email
+    scope: global
+    value: 'schlaubitzcristobal@gmail.com'
+  tags:
+    - git
+
+- name: Git setup default branch as main
+  community.general.git_config:
+    name: init.defaultBranch
+    scope: global
+    value: 'main'
+  tags:
+    - git
+
+- name: Ignore DS_Store
+  shell: touch $HOME/.gitignore_global && echo '.DS_Store' >> $HOME/.gitignore_global
+  tags:
+    - git
+- name: Git setup global gitignore
+  community.general.git_config:
+    name: core.excludesfile
+    scope: global
+    value: '$HOME/.gitignore_global'
+  tags:
+    - git
+
+- name: Git setup credential
+  community.general.git_config:
+    name: credential.helper
+    scope: global
+    value: 'osxkeychain'
+  tags:
+    - git
+
+- name: Git setup ssh
+  community.general.git_config:
+    name: url.ssh://git@github.com/.insteadOf
+    scope: global
+    value: 'https://github.com/'
+  tags:
+    - git
