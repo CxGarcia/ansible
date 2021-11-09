@@ -1,0 +1,15 @@
+pre_tasks:
+  - name: Update brew
+    become: true
+    homebrew:
+      update_homebrew: yes
+      state: present
+    tags:
+      - install
+      - core
+tasks:
+  - include: tasks/ssh.yml
+  - include: tasks/git.yml
+  - include: tasks/core.yml
+  - include: tasks/node.yml
+  - include: tasks/zsh.yml

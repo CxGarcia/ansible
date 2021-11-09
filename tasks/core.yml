@@ -1,0 +1,40 @@
+- name: Install packages
+  become: true
+  homebrew:
+    name:
+      [
+        'wget --with-iri',
+        'gmp',
+        'grep',
+        'node',
+        'git',
+        'git-lfs',
+        'github/gh/gh',
+        'zsh',
+      ]
+  tags:
+    - core
+    - mac
+- name: Install casks
+  become: true
+  homebrew:
+    install_options: cask
+    name:
+      [
+        'dropbox',
+        'firefox',
+        'google-chrome',
+        'iterm2',
+        'notion',
+        'spotify',
+        'vlc',
+        'visual-studio-code',
+        'zoom',
+        'karabiner-elements',
+        'discord',
+        'slack',
+        'hammerspoon',
+      ]
+  tags:
+    - core
+    - mac
