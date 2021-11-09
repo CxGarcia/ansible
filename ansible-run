@@ -13,4 +13,4 @@ fi
 brew install ansible
 
 ## pull ansible
-ansible-pull -d $HOME -C main -U https://github.com/CxGarcia/ansible.git
+ansible-pull -C main -U https://github.com/CxGarcia/ansible.git
