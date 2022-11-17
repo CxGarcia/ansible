@@ -7,17 +7,17 @@
     state: present
     name:
       [
-        'wget',
-        'gmp',
-        'nmap',
-        'grep',
-        'node',
-        'git',
-        'git-lfs',
-        'github/gh/gh',
-        'zsh',
-        'fnm',
-        'stow',
+        "wget",
+        "gmp",
+        "nmap",
+        "grep",
+        "node",
+        "git",
+        "git-lfs",
+        "github/gh/gh",
+        "zsh",
+        "fnm",
+        "stow",
       ]
 
 - name: Install casks
@@ -31,17 +31,11 @@
     upgrade_all: yes
     name:
       [
-        'dropbox',
-        'firefox',
-        'google-chrome',
-        'iterm2',
-        'notion',
-        'spotify',
-        'vlc',
-        'visual-studio-code',
-        'zoom',
-        'karabiner-elements',
-        'discord',
-        'slack',
-        'hammerspoon',
+        "iterm2",
+        "notion",
+        "spotify",
+        "vlc",
+        "visual-studio-code",
+        "karabiner-elements",
+        "hammerspoon",
       ]
